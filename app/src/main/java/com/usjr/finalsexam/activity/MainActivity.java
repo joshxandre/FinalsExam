@@ -55,14 +55,19 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     private void displayListOfVideos() {
         // TODO: Implement this method
-    }
+        List<Video> videos = VideoTable.getAllVideos(getApplicationContext());
+        mAdapter.addAll(videos);
+
+       }
 
     public void showProgressBar() {
         // TODO: Implement this method
+
     }
 
     public void hideProgressBar() {
         // TODO: Implement this method
+        mProgressBar.setVisibility(View.GONE);
     }
 
     @Override
